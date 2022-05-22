@@ -14,6 +14,8 @@
 		E04DF054283AA25300F51664 /* CitasMigraciones.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E04DF052283AA25300F51664 /* CitasMigraciones.xcdatamodeld */; };
 		E04DF056283AA26000F51664 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E04DF055283AA26000F51664 /* Assets.xcassets */; };
 		E04DF059283AA26000F51664 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E04DF057283AA26000F51664 /* LaunchScreen.storyboard */; };
+		E04DF06A283AA4F000F51664 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04DF069283AA4F000F51664 /* Constants.swift */; };
+		E04DF06C283AA5A300F51664 /* EntityFileTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04DF06B283AA5A300F51664 /* EntityFileTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		E04DF055283AA26000F51664 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E04DF058283AA26000F51664 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E04DF05A283AA26000F51664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E04DF069283AA4F000F51664 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E04DF06B283AA5A300F51664 /* EntityFileTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityFileTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +62,58 @@
 		E04DF048283AA25300F51664 /* CitasMigraciones */ = {
 			isa = PBXGroup;
 			children = (
+				E04DF068283AA4B100F51664 /* Utils */,
+				E04DF062283AA39900F51664 /* Views */,
+				E04DF061283AA38500F51664 /* Models */,
+				E04DF060283AA36200F51664 /* Controllers */,
 				E04DF049283AA25300F51664 /* AppDelegate.swift */,
 				E04DF04B283AA25300F51664 /* SceneDelegate.swift */,
-				E04DF04D283AA25300F51664 /* ViewController.swift */,
-				E04DF04F283AA25300F51664 /* Main.storyboard */,
 				E04DF055283AA26000F51664 /* Assets.xcassets */,
-				E04DF057283AA26000F51664 /* LaunchScreen.storyboard */,
 				E04DF05A283AA26000F51664 /* Info.plist */,
 				E04DF052283AA25300F51664 /* CitasMigraciones.xcdatamodeld */,
 			);
 			path = CitasMigraciones;
+			sourceTree = "<group>";
+		};
+		E04DF060283AA36200F51664 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E04DF04D283AA25300F51664 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E04DF061283AA38500F51664 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E04DF06B283AA5A300F51664 /* EntityFileTest.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E04DF062283AA39900F51664 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E04DF057283AA26000F51664 /* LaunchScreen.storyboard */,
+				E04DF067283AA45300F51664 /* Home */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E04DF067283AA45300F51664 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E04DF04F283AA25300F51664 /* Main.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E04DF068283AA4B100F51664 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E04DF069283AA4F000F51664 /* Constants.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +187,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E04DF06C283AA5A300F51664 /* EntityFileTest.swift in Sources */,
+				E04DF06A283AA4F000F51664 /* Constants.swift in Sources */,
 				E04DF04E283AA25300F51664 /* ViewController.swift in Sources */,
 				E04DF04A283AA25300F51664 /* AppDelegate.swift in Sources */,
 				E04DF054283AA25300F51664 /* CitasMigraciones.xcdatamodeld in Sources */,
