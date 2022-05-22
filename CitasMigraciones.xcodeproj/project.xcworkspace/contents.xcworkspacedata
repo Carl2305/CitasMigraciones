@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:CitasMigraciones.xcodeproj">
+      location = "self:/Users/carlosmogollon/Documents/work-space-ios/CitasMigraciones/CitasMigraciones.xcodeproj">
    </FileRef>
 </Workspace>
