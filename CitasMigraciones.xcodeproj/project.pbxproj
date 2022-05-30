@@ -21,7 +21,7 @@
 /* Begin PBXFileReference section */
 		E04DF046283AA25300F51664 /* CitasMigraciones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CitasMigraciones.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E04DF049283AA25300F51664 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E04DF04B283AA25300F51664 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E04DF04B283AA25300F51664 /* SceneDelegate.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E04DF04D283AA25300F51664 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E04DF050283AA25300F51664 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E04DF053283AA25300F51664 /* CitasMigraciones.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CitasMigraciones.xcdatamodel; sourceTree = "<group>"; };
@@ -338,6 +338,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CitasMigraciones/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -345,7 +346,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.migraciones.CitasMigraciones;
 				PRODUCT_NAME = CitasMigraciones;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -355,6 +356,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CitasMigraciones/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -362,7 +364,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.migraciones.CitasMigraciones;
 				PRODUCT_NAME = CitasMigraciones;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
