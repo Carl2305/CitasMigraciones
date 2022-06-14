@@ -55,6 +55,7 @@ class SignUpViewController:UIViewController{
     }
     
     @IBAction func signUpButton(_ sender: Any) {
+        view.endEditing(true)
         let dni=dniTextField.text!
         let date=getDateForm(input: dateBirthDatePicker, format: "yyyy-MM-dd")
         let address=addressTextField.text!
@@ -100,14 +101,6 @@ class SignUpViewController:UIViewController{
         
     }
     
-    func getDateForm(input:UIDatePicker,format:String)->String{
-        let dateFormatter = DateFormatter()
-        dateFormatter.timeStyle = .short
-        dateFormatter.dateFormat = format
-        let strDate = dateFormatter.string(from: input.date)
-        return strDate
-    }
-    
     func signUpUser(dni:String,date:String,address:String,email:String,password:String){
         let URL_BASE:String = ConstantsCitasMigraciones.self().URL_BASE_API + "auth/signUp"
         let params = [
@@ -140,6 +133,14 @@ class SignUpViewController:UIViewController{
             }
         }
         
+    }
+    
+    func getDateForm(input:UIDatePicker,format:String)->String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = .short
+        dateFormatter.dateFormat = format
+        let strDate = dateFormatter.string(from: input.date)
+        return strDate
     }
     
     func showAlert(title:String, message:String){

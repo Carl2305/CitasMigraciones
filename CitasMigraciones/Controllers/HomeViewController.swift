@@ -58,7 +58,6 @@ class HomeViewController: UIViewController {
         navigationController?.pushViewController(UpdateCredentialsViewController(), animated: true)
     }
     @IBAction func closeSessionButtonAction(_ sender: Any) {
-        // aqui se deben limpiar las userdefauls
         UsersDefaultsCitasMigraciones().clearUsersDefault()
         self.navigationController?.popToRootViewController(animated: true)
     }

@@ -27,12 +27,16 @@ class SearchCitaViewController: UIViewController, UITableViewDelegate, UITableVi
         let cell=tableView.dequeueReusableCell(withIdentifier:  "CELL")
         let cita=citaData[indexPath.row]
         cell!.textLabel!.text="\(cita.cliente.nombre) - \(cita.fechaRegistro)"
-        cell!.textLabel!.font = UIFont.systemFont(ofSize: 12)
+        cell!.textLabel!.font = UIFont.systemFont(ofSize: 14)
         return cell!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.navigationController?.pushViewController(DescriptionSearchCitaViewController(cita: citaData[indexPath[1]]), animated: true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden=false
     }
     
     override func viewDidLoad() {

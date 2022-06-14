@@ -33,6 +33,7 @@ class UpdateCredentialsViewController: UIViewController {
     }
 
     @IBAction func changePasswordButtonAction(_ sender: Any) {
+        view.endEditing(true)
         let password = passwordTextField.text!
         let newPassword = newPasswordTextField.text!
         let repeatPassword = repeatPasswordTextField.text!

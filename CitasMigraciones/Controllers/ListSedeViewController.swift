@@ -12,7 +12,7 @@ import SwiftyJSON
 
 class ListSedeViewController: UIViewController, UITableViewDataSource {
     
-    var campusData:[Campus] = []
+    private var campusData:[Campus] = []
     @IBOutlet weak var campusTable: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -23,11 +23,11 @@ class ListSedeViewController: UIViewController, UITableViewDataSource {
         let cell=tableView.dequeueReusableCell(withIdentifier:  "CELL")
         let campus=campusData[indexPath.row]
         cell!.textLabel!.text=campus.nombre
+        cell!.textLabel!.font = UIFont.systemFont(ofSize: 15)
+        cell?.textLabel!.numberOfLines = 2
         return cell!
     }
-    
-
-    
+        
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden=false
     }
@@ -62,10 +62,14 @@ class ListSedeViewController: UIViewController, UITableViewDataSource {
                         })
                         self.campusTable.reloadData()
                     }else{
+                        self.campusData = []
+                        self.campusTable.reloadData()
                         self.showAlert(title: "Error", message: "No se pudo listar las sedes")
                     }
                 case .failure(let error):
                     print(error.localizedDescription)
+                    self.campusData = []
+                    self.campusTable.reloadData()
                    self.showAlert(title: "Error", message: "No se pudo listar las sedes, error en el servicio")
                 }
             }

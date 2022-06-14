@@ -18,6 +18,10 @@ class DescriptionSearchCitaViewController: UIViewController {
     @IBOutlet weak var dateRegisterLabel: UILabel!
     private let cita:Cita
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden=false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

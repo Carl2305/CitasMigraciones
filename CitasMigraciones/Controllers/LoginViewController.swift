@@ -18,6 +18,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var signInButton: UIButton!
 
+    private let isLogued = UsersDefaultsCitasMigraciones.self().getIsLogued()
+    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden=true
     }
@@ -27,9 +29,15 @@ class LoginViewController: UIViewController {
         signUpButton.borderRound()
         signInButton.borderRound()
         self.navigationController?.isNavigationBarHidden = true
+        
+        if(self.isLogued){
+            self.navigationController?.pushViewController(HomeViewController(), animated: true)
+        }
+        
     }
     
     @IBAction func signInButtonAction(_ sender: Any) {
+        view.endEditing(true)
         let dni = dniTextField.text!
         let password = passwordTextField.text!
         
@@ -60,14 +68,20 @@ class LoginViewController: UIViewController {
                 let dataResponse = ApiResponseLogin(success: json["success"].boolValue)
                 if (dataResponse.success){
                     self.cleanForm()
+                    // aqui se debe hacer la consulta para obtener los
+                    // datos del usaurio y registrarlos en los UsersDefaults
+
+                    UsersDefaultsCitasMigraciones.self().saveIsLogued(signIn: true)
                     // redireige la home
                     self.navigationController?.pushViewController(HomeViewController(), animated: true)
                     
                 }else{
+                    UsersDefaultsCitasMigraciones().clearUsersDefault()
                     self.cleanForm()
                     self.showAlert(title: "Error", message: "No se pudo acceder, revise sus credenciales")
                 }
             case .failure(let error):
+                UsersDefaultsCitasMigraciones().clearUsersDefault()
                 print(error.localizedDescription)
                 self.showAlert(title: "Error", message: "No se pudo acceder, error en el servicio")
             }

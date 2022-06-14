@@ -9,10 +9,20 @@
 import UIKit
 
 class UsersDefaultsCitasMigraciones{
+    private let KEY_LOGIN="MY_KEY_LOGIN"
     private let KEY_DNI="MY_KEY_DNI"
     private let KEY_DATE_BIRTHDATE="MY_KEY_DATE_BIRTHDATE"
     private let KEY_ADDRESS="MY_KEY_ADDRESS"
     private let KEY_EMAIL="MY_KEY_EMAIL"
+    
+    func getIsLogued() -> Bool{
+        return UserDefaults.standard.bool(forKey: KEY_LOGIN)
+    }
+    
+    func saveIsLogued(signIn:Bool) {
+        UserDefaults.standard.set(signIn,forKey: KEY_LOGIN)
+        UserDefaults.standard.synchronize()
+    }
     
     func getDni() -> String {
         return UserDefaults.standard.string(forKey: KEY_DNI)!
@@ -71,6 +81,7 @@ class UsersDefaultsCitasMigraciones{
     }
     
     func clearUsersDefault(){
+        UserDefaults.standard.removeObject(forKey: KEY_LOGIN)
         UserDefaults.standard.removeObject(forKey: KEY_DNI)
         UserDefaults.standard.removeObject(forKey: KEY_DATE_BIRTHDATE)
         UserDefaults.standard.removeObject(forKey: KEY_ADDRESS)

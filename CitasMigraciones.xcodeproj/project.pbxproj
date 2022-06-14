@@ -25,6 +25,10 @@
 		E0E646D72857E9C600E88256 /* DescriptionSearchCitaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0E646D52857E9C600E88256 /* DescriptionSearchCitaViewController.xib */; };
 		E0E646DA285803C700E88256 /* RegisterCitaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E646D8285803C700E88256 /* RegisterCitaViewController.swift */; };
 		E0E646DB285803C700E88256 /* RegisterCitaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0E646D9285803C700E88256 /* RegisterCitaViewController.xib */; };
+		E0E646DE285829D300E88256 /* SelectCupoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E646DC285829D300E88256 /* SelectCupoViewController.swift */; };
+		E0E646DF285829D300E88256 /* SelectCupoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0E646DD285829D300E88256 /* SelectCupoViewController.xib */; };
+		E0E646E2285839C900E88256 /* PayRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E646E0285839C900E88256 /* PayRegisterViewController.swift */; };
+		E0E646E3285839C900E88256 /* PayRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0E646E1285839C900E88256 /* PayRegisterViewController.xib */; };
 		E0E7EC0C2856943400D6D895 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E7EC0A2856943400D6D895 /* HomeViewController.swift */; };
 		E0E7EC0D2856943400D6D895 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0E7EC0B2856943400D6D895 /* HomeViewController.xib */; };
 		E0E7EC132856A5D900D6D895 /* UsersDefaultsCitasMigraciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E7EC122856A5D900D6D895 /* UsersDefaultsCitasMigraciones.swift */; };
@@ -59,6 +63,10 @@
 		E0E646D52857E9C600E88256 /* DescriptionSearchCitaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionSearchCitaViewController.xib; sourceTree = "<group>"; };
 		E0E646D8285803C700E88256 /* RegisterCitaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCitaViewController.swift; sourceTree = "<group>"; };
 		E0E646D9285803C700E88256 /* RegisterCitaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterCitaViewController.xib; sourceTree = "<group>"; };
+		E0E646DC285829D300E88256 /* SelectCupoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCupoViewController.swift; sourceTree = "<group>"; };
+		E0E646DD285829D300E88256 /* SelectCupoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectCupoViewController.xib; sourceTree = "<group>"; };
+		E0E646E0285839C900E88256 /* PayRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayRegisterViewController.swift; sourceTree = "<group>"; };
+		E0E646E1285839C900E88256 /* PayRegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayRegisterViewController.xib; sourceTree = "<group>"; };
 		E0E7EC0A2856943400D6D895 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E0E7EC0B2856943400D6D895 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		E0E7EC122856A5D900D6D895 /* UsersDefaultsCitasMigraciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDefaultsCitasMigraciones.swift; sourceTree = "<group>"; };
@@ -146,6 +154,8 @@
 				E0E7EC242856E4B700D6D895 /* SearchCitaViewController.swift */,
 				E0E646D42857E9C600E88256 /* DescriptionSearchCitaViewController.swift */,
 				E0E646D8285803C700E88256 /* RegisterCitaViewController.swift */,
+				E0E646DC285829D300E88256 /* SelectCupoViewController.swift */,
+				E0E646E0285839C900E88256 /* PayRegisterViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -172,6 +182,8 @@
 				E0E7EC252856E4B700D6D895 /* SearchCitaViewController.xib */,
 				E0E646D52857E9C600E88256 /* DescriptionSearchCitaViewController.xib */,
 				E0E646D9285803C700E88256 /* RegisterCitaViewController.xib */,
+				E0E646DD285829D300E88256 /* SelectCupoViewController.xib */,
+				E0E646E1285839C900E88256 /* PayRegisterViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -249,12 +261,14 @@
 				E04DF059283AA26000F51664 /* LaunchScreen.storyboard in Resources */,
 				E0E7EC0D2856943400D6D895 /* HomeViewController.xib in Resources */,
 				E0E646D72857E9C600E88256 /* DescriptionSearchCitaViewController.xib in Resources */,
+				E0E646DF285829D300E88256 /* SelectCupoViewController.xib in Resources */,
 				E04DF056283AA26000F51664 /* Assets.xcassets in Resources */,
 				E0E7EC272856E4B800D6D895 /* SearchCitaViewController.xib in Resources */,
 				E0E646DB285803C700E88256 /* RegisterCitaViewController.xib in Resources */,
 				E04DF051283AA25300F51664 /* Main.storyboard in Resources */,
 				E0E7EC172856C65D00D6D895 /* UpdateCredentialsViewController.xib in Resources */,
 				E0E7EC1D2856D09000D6D895 /* ListSedeViewController.xib in Resources */,
+				E0E646E3285839C900E88256 /* PayRegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,11 +325,13 @@
 				E04DF06C283AA5A300F51664 /* EntityFileTest.swift in Sources */,
 				E0E646DA285803C700E88256 /* RegisterCitaViewController.swift in Sources */,
 				E04DF06A283AA4F000F51664 /* Constants.swift in Sources */,
+				E0E646E2285839C900E88256 /* PayRegisterViewController.swift in Sources */,
 				E0E7EC162856C65D00D6D895 /* UpdateCredentialsViewController.swift in Sources */,
 				E0D75ED128494CC6009FE61D /* SignUpViewController.swift in Sources */,
 				E0D75ECF284949CA009FE61D /* ExtensionButton.swift in Sources */,
 				E04DF04E283AA25300F51664 /* LoginViewController.swift in Sources */,
 				E04DF04A283AA25300F51664 /* AppDelegate.swift in Sources */,
+				E0E646DE285829D300E88256 /* SelectCupoViewController.swift in Sources */,
 				E0E7EC132856A5D900D6D895 /* UsersDefaultsCitasMigraciones.swift in Sources */,
 				E0E7EC0C2856943400D6D895 /* HomeViewController.swift in Sources */,
 				E082B9FF28540C7E0081D386 /* ApiResponseGeneric.swift in Sources */,
