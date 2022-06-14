@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64B30B99888263FC894A7F32 /* Pods_CitasMigraciones.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 316A924F6D28F18627374F34 /* Pods_CitasMigraciones.framework */; };
 		E04DF04A283AA25300F51664 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04DF049283AA25300F51664 /* AppDelegate.swift */; };
 		E04DF04C283AA25300F51664 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04DF04B283AA25300F51664 /* SceneDelegate.swift */; };
 		E04DF04E283AA25300F51664 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04DF04D283AA25300F51664 /* LoginViewController.swift */; };
@@ -16,12 +17,29 @@
 		E04DF059283AA26000F51664 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E04DF057283AA26000F51664 /* LaunchScreen.storyboard */; };
 		E04DF06A283AA4F000F51664 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04DF069283AA4F000F51664 /* Constants.swift */; };
 		E04DF06C283AA5A300F51664 /* EntityFileTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04DF06B283AA5A300F51664 /* EntityFileTest.swift */; };
+		E082B9FF28540C7E0081D386 /* ApiResponseGeneric.swift in Sources */ = {isa = PBXBuildFile; fileRef = E082B9FE28540C7E0081D386 /* ApiResponseGeneric.swift */; };
 		E0D75ECF284949CA009FE61D /* ExtensionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D75ECE284949CA009FE61D /* ExtensionButton.swift */; };
 		E0D75ED128494CC6009FE61D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D75ED028494CC6009FE61D /* SignUpViewController.swift */; };
-		E0D75ED528495D91009FE61D /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D75ED428495D91009FE61D /* UserViewController.swift */; };
+		E0E646D32857A51000E88256 /* CitaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E646D22857A51000E88256 /* CitaResponse.swift */; };
+		E0E646D62857E9C600E88256 /* DescriptionSearchCitaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E646D42857E9C600E88256 /* DescriptionSearchCitaViewController.swift */; };
+		E0E646D72857E9C600E88256 /* DescriptionSearchCitaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0E646D52857E9C600E88256 /* DescriptionSearchCitaViewController.xib */; };
+		E0E646DA285803C700E88256 /* RegisterCitaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E646D8285803C700E88256 /* RegisterCitaViewController.swift */; };
+		E0E646DB285803C700E88256 /* RegisterCitaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0E646D9285803C700E88256 /* RegisterCitaViewController.xib */; };
+		E0E7EC0C2856943400D6D895 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E7EC0A2856943400D6D895 /* HomeViewController.swift */; };
+		E0E7EC0D2856943400D6D895 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0E7EC0B2856943400D6D895 /* HomeViewController.xib */; };
+		E0E7EC132856A5D900D6D895 /* UsersDefaultsCitasMigraciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E7EC122856A5D900D6D895 /* UsersDefaultsCitasMigraciones.swift */; };
+		E0E7EC162856C65D00D6D895 /* UpdateCredentialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E7EC142856C65D00D6D895 /* UpdateCredentialsViewController.swift */; };
+		E0E7EC172856C65D00D6D895 /* UpdateCredentialsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0E7EC152856C65D00D6D895 /* UpdateCredentialsViewController.xib */; };
+		E0E7EC192856CF6B00D6D895 /* SedeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E7EC182856CF6B00D6D895 /* SedeResponse.swift */; };
+		E0E7EC1C2856D09000D6D895 /* ListSedeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E7EC1A2856D09000D6D895 /* ListSedeViewController.swift */; };
+		E0E7EC1D2856D09000D6D895 /* ListSedeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0E7EC1B2856D09000D6D895 /* ListSedeViewController.xib */; };
+		E0E7EC262856E4B800D6D895 /* SearchCitaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E7EC242856E4B700D6D895 /* SearchCitaViewController.swift */; };
+		E0E7EC272856E4B800D6D895 /* SearchCitaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0E7EC252856E4B700D6D895 /* SearchCitaViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		316A924F6D28F18627374F34 /* Pods_CitasMigraciones.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CitasMigraciones.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		487D22E17ABD539DCDE9C9EA /* Pods-CitasMigraciones.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CitasMigraciones.release.xcconfig"; path = "Target Support Files/Pods-CitasMigraciones/Pods-CitasMigraciones.release.xcconfig"; sourceTree = "<group>"; };
 		E04DF046283AA25300F51664 /* CitasMigraciones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CitasMigraciones.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E04DF049283AA25300F51664 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E04DF04B283AA25300F51664 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,9 +51,25 @@
 		E04DF05A283AA26000F51664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E04DF069283AA4F000F51664 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E04DF06B283AA5A300F51664 /* EntityFileTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityFileTest.swift; sourceTree = "<group>"; };
+		E082B9FE28540C7E0081D386 /* ApiResponseGeneric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponseGeneric.swift; sourceTree = "<group>"; };
 		E0D75ECE284949CA009FE61D /* ExtensionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionButton.swift; sourceTree = "<group>"; };
 		E0D75ED028494CC6009FE61D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		E0D75ED428495D91009FE61D /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		E0E646D22857A51000E88256 /* CitaResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitaResponse.swift; sourceTree = "<group>"; };
+		E0E646D42857E9C600E88256 /* DescriptionSearchCitaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionSearchCitaViewController.swift; sourceTree = "<group>"; };
+		E0E646D52857E9C600E88256 /* DescriptionSearchCitaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionSearchCitaViewController.xib; sourceTree = "<group>"; };
+		E0E646D8285803C700E88256 /* RegisterCitaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCitaViewController.swift; sourceTree = "<group>"; };
+		E0E646D9285803C700E88256 /* RegisterCitaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterCitaViewController.xib; sourceTree = "<group>"; };
+		E0E7EC0A2856943400D6D895 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E0E7EC0B2856943400D6D895 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		E0E7EC122856A5D900D6D895 /* UsersDefaultsCitasMigraciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDefaultsCitasMigraciones.swift; sourceTree = "<group>"; };
+		E0E7EC142856C65D00D6D895 /* UpdateCredentialsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCredentialsViewController.swift; sourceTree = "<group>"; };
+		E0E7EC152856C65D00D6D895 /* UpdateCredentialsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateCredentialsViewController.xib; sourceTree = "<group>"; };
+		E0E7EC182856CF6B00D6D895 /* SedeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SedeResponse.swift; sourceTree = "<group>"; };
+		E0E7EC1A2856D09000D6D895 /* ListSedeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSedeViewController.swift; sourceTree = "<group>"; };
+		E0E7EC1B2856D09000D6D895 /* ListSedeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListSedeViewController.xib; sourceTree = "<group>"; };
+		E0E7EC242856E4B700D6D895 /* SearchCitaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCitaViewController.swift; sourceTree = "<group>"; };
+		E0E7EC252856E4B700D6D895 /* SearchCitaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCitaViewController.xib; sourceTree = "<group>"; };
+		FC63FE1BD9873F1A45E8A3A5 /* Pods-CitasMigraciones.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CitasMigraciones.debug.xcconfig"; path = "Target Support Files/Pods-CitasMigraciones/Pods-CitasMigraciones.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +77,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64B30B99888263FC894A7F32 /* Pods_CitasMigraciones.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		180709FD4425B8E9ED338A1A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC63FE1BD9873F1A45E8A3A5 /* Pods-CitasMigraciones.debug.xcconfig */,
+				487D22E17ABD539DCDE9C9EA /* Pods-CitasMigraciones.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		42CF6EE1E3D84508AE5CFB46 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				316A924F6D28F18627374F34 /* Pods_CitasMigraciones.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E04DF03D283AA25200F51664 = {
 			isa = PBXGroup;
 			children = (
 				E04DF048283AA25300F51664 /* CitasMigraciones */,
 				E04DF047283AA25300F51664 /* Products */,
+				180709FD4425B8E9ED338A1A /* Pods */,
+				42CF6EE1E3D84508AE5CFB46 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,7 +140,12 @@
 			children = (
 				E04DF04D283AA25300F51664 /* LoginViewController.swift */,
 				E0D75ED028494CC6009FE61D /* SignUpViewController.swift */,
-				E0D75ED428495D91009FE61D /* UserViewController.swift */,
+				E0E7EC0A2856943400D6D895 /* HomeViewController.swift */,
+				E0E7EC142856C65D00D6D895 /* UpdateCredentialsViewController.swift */,
+				E0E7EC1A2856D09000D6D895 /* ListSedeViewController.swift */,
+				E0E7EC242856E4B700D6D895 /* SearchCitaViewController.swift */,
+				E0E646D42857E9C600E88256 /* DescriptionSearchCitaViewController.swift */,
+				E0E646D8285803C700E88256 /* RegisterCitaViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -95,6 +154,9 @@
 			isa = PBXGroup;
 			children = (
 				E04DF06B283AA5A300F51664 /* EntityFileTest.swift */,
+				E082B9FE28540C7E0081D386 /* ApiResponseGeneric.swift */,
+				E0E7EC182856CF6B00D6D895 /* SedeResponse.swift */,
+				E0E646D22857A51000E88256 /* CitaResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -102,8 +164,14 @@
 		E04DF062283AA39900F51664 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E04DF04F283AA25300F51664 /* Main.storyboard */,
 				E04DF057283AA26000F51664 /* LaunchScreen.storyboard */,
+				E04DF04F283AA25300F51664 /* Main.storyboard */,
+				E0E7EC0B2856943400D6D895 /* HomeViewController.xib */,
+				E0E7EC152856C65D00D6D895 /* UpdateCredentialsViewController.xib */,
+				E0E7EC1B2856D09000D6D895 /* ListSedeViewController.xib */,
+				E0E7EC252856E4B700D6D895 /* SearchCitaViewController.xib */,
+				E0E646D52857E9C600E88256 /* DescriptionSearchCitaViewController.xib */,
+				E0E646D9285803C700E88256 /* RegisterCitaViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -113,6 +181,7 @@
 			children = (
 				E04DF069283AA4F000F51664 /* Constants.swift */,
 				E0D75ECE284949CA009FE61D /* ExtensionButton.swift */,
+				E0E7EC122856A5D900D6D895 /* UsersDefaultsCitasMigraciones.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -124,9 +193,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E04DF05D283AA26000F51664 /* Build configuration list for PBXNativeTarget "CitasMigraciones" */;
 			buildPhases = (
+				2E21F5A9A87F18C5A22328EA /* [CP] Check Pods Manifest.lock */,
 				E04DF042283AA25200F51664 /* Sources */,
 				E04DF043283AA25200F51664 /* Frameworks */,
 				E04DF044283AA25200F51664 /* Resources */,
+				EDAAC7E9C1A10E4986FC7F19 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -176,27 +247,84 @@
 			buildActionMask = 2147483647;
 			files = (
 				E04DF059283AA26000F51664 /* LaunchScreen.storyboard in Resources */,
+				E0E7EC0D2856943400D6D895 /* HomeViewController.xib in Resources */,
+				E0E646D72857E9C600E88256 /* DescriptionSearchCitaViewController.xib in Resources */,
 				E04DF056283AA26000F51664 /* Assets.xcassets in Resources */,
+				E0E7EC272856E4B800D6D895 /* SearchCitaViewController.xib in Resources */,
+				E0E646DB285803C700E88256 /* RegisterCitaViewController.xib in Resources */,
 				E04DF051283AA25300F51664 /* Main.storyboard in Resources */,
+				E0E7EC172856C65D00D6D895 /* UpdateCredentialsViewController.xib in Resources */,
+				E0E7EC1D2856D09000D6D895 /* ListSedeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2E21F5A9A87F18C5A22328EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CitasMigraciones-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDAAC7E9C1A10E4986FC7F19 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CitasMigraciones/Pods-CitasMigraciones-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CitasMigraciones/Pods-CitasMigraciones-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CitasMigraciones/Pods-CitasMigraciones-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E04DF042283AA25200F51664 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0E7EC262856E4B800D6D895 /* SearchCitaViewController.swift in Sources */,
 				E04DF06C283AA5A300F51664 /* EntityFileTest.swift in Sources */,
-				E0D75ED528495D91009FE61D /* UserViewController.swift in Sources */,
+				E0E646DA285803C700E88256 /* RegisterCitaViewController.swift in Sources */,
 				E04DF06A283AA4F000F51664 /* Constants.swift in Sources */,
+				E0E7EC162856C65D00D6D895 /* UpdateCredentialsViewController.swift in Sources */,
 				E0D75ED128494CC6009FE61D /* SignUpViewController.swift in Sources */,
 				E0D75ECF284949CA009FE61D /* ExtensionButton.swift in Sources */,
 				E04DF04E283AA25300F51664 /* LoginViewController.swift in Sources */,
 				E04DF04A283AA25300F51664 /* AppDelegate.swift in Sources */,
+				E0E7EC132856A5D900D6D895 /* UsersDefaultsCitasMigraciones.swift in Sources */,
+				E0E7EC0C2856943400D6D895 /* HomeViewController.swift in Sources */,
+				E082B9FF28540C7E0081D386 /* ApiResponseGeneric.swift in Sources */,
 				E04DF054283AA25300F51664 /* CitasMigraciones.xcdatamodeld in Sources */,
+				E0E7EC1C2856D09000D6D895 /* ListSedeViewController.swift in Sources */,
+				E0E646D32857A51000E88256 /* CitaResponse.swift in Sources */,
 				E04DF04C283AA25300F51664 /* SceneDelegate.swift in Sources */,
+				E0E646D62857E9C600E88256 /* DescriptionSearchCitaViewController.swift in Sources */,
+				E0E7EC192856CF6B00D6D895 /* SedeResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +466,7 @@
 		};
 		E04DF05E283AA26000F51664 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC63FE1BD9873F1A45E8A3A5 /* Pods-CitasMigraciones.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -355,6 +484,7 @@
 		};
 		E04DF05F283AA26000F51664 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 487D22E17ABD539DCDE9C9EA /* Pods-CitasMigraciones.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
