@@ -67,14 +67,8 @@ class LoginViewController: UIViewController {
                 let json=JSON(val)
                 let dataResponse = ApiResponseLogin(success: json["success"].boolValue)
                 if (dataResponse.success){
+                    self.getUserForSetUserDefaults(dni: dni)
                     self.cleanForm()
-                    // aqui se debe hacer la consulta para obtener los
-                    // datos del usaurio y registrarlos en los UsersDefaults
-
-                    UsersDefaultsCitasMigraciones.self().saveIsLogued(signIn: true)
-                    // redireige la home
-                    self.navigationController?.pushViewController(HomeViewController(), animated: true)
-                    
                 }else{
                     UsersDefaultsCitasMigraciones().clearUsersDefault()
                     self.cleanForm()
@@ -84,6 +78,33 @@ class LoginViewController: UIViewController {
                 UsersDefaultsCitasMigraciones().clearUsersDefault()
                 print(error.localizedDescription)
                 self.showAlert(title: "Error", message: "No se pudo acceder, error en el servicio")
+            }
+        }
+    }
+    
+    func getUserForSetUserDefaults(dni:String){
+        let URL_BASE:String = ConstantsCitasMigraciones.self().URL_BASE_API + "auth/listaPorDNI/\(dni)"
+        Alamofire.request(URL_BASE, method: .post, encoding: JSONEncoding.default).responseJSON{ (response) in
+            switch response.result{
+                
+            case .success(let val):
+                let json=JSON(val)
+                if(json["status"].stringValue=="OK"){
+                    UsersDefaultsCitasMigraciones.self().saveIsLogued(signIn: true)
+                    UsersDefaultsCitasMigraciones.self().saveAndPutDni(dni: json["data"]["dni"].stringValue)
+                    UsersDefaultsCitasMigraciones.self().saveAndPutDateBirthDate(date: json["data"]["fechaNac"].stringValue)
+                    UsersDefaultsCitasMigraciones.self().saveAndPutAddress(address: json["data"]["direccion"].stringValue)
+                    UsersDefaultsCitasMigraciones.self().saveAndPutEmail(email: json["data"]["correo"].stringValue)
+                    UsersDefaultsCitasMigraciones.self().saveAndPutName(name: json["data"]["nombre"].stringValue)
+                    UsersDefaultsCitasMigraciones.self().saveAndPutLastName(last: "\(json["data"]["apePaterno"].stringValue) \(json["data"]["apeMaterno"].stringValue)")
+
+                    // redirige al home
+                    self.navigationController?.pushViewController(HomeViewController(), animated: true)
+                }else{
+                     return
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
             }
         }
     }

@@ -14,6 +14,8 @@ class UsersDefaultsCitasMigraciones{
     private let KEY_DATE_BIRTHDATE="MY_KEY_DATE_BIRTHDATE"
     private let KEY_ADDRESS="MY_KEY_ADDRESS"
     private let KEY_EMAIL="MY_KEY_EMAIL"
+    private let KEY_NAME_USER="MY_KEY_NAME_USER"
+    private let KEY_LAST_NAME_USER="MY_KEY_LAST_NAME_USER"
     
     func getIsLogued() -> Bool{
         return UserDefaults.standard.bool(forKey: KEY_LOGIN)
@@ -25,7 +27,7 @@ class UsersDefaultsCitasMigraciones{
     }
     
     func getDni() -> String {
-        return UserDefaults.standard.string(forKey: KEY_DNI)!
+        return UserDefaults.standard.string(forKey: KEY_DNI) ?? ""
     }
     
     func saveAndPutDni(dni:String) {
@@ -39,11 +41,11 @@ class UsersDefaultsCitasMigraciones{
     }
     
     func getDateBirthDate() -> String {
-        return UserDefaults.standard.string(forKey: KEY_DATE_BIRTHDATE)!
+        return UserDefaults.standard.string(forKey: KEY_DATE_BIRTHDATE) ?? ""
     }
     
-    func saveAndPutDateBirthDate(dni:String) {
-        UserDefaults.standard.set(dni,forKey: KEY_DATE_BIRTHDATE)
+    func saveAndPutDateBirthDate(date:String) {
+        UserDefaults.standard.set(date,forKey: KEY_DATE_BIRTHDATE)
         UserDefaults.standard.synchronize()
     }
         
@@ -53,11 +55,11 @@ class UsersDefaultsCitasMigraciones{
     }
     
     func getAddress() -> String {
-        return UserDefaults.standard.string(forKey: KEY_ADDRESS)!
+        return UserDefaults.standard.string(forKey: KEY_ADDRESS) ?? ""
     }
     
-    func saveAndPutAddress(dni:String) {
-        UserDefaults.standard.set(dni,forKey: KEY_ADDRESS)
+    func saveAndPutAddress(address:String) {
+        UserDefaults.standard.set(address,forKey: KEY_ADDRESS)
         UserDefaults.standard.synchronize()
     }
         
@@ -67,16 +69,44 @@ class UsersDefaultsCitasMigraciones{
     }
     
     func getEmail() -> String {
-        return UserDefaults.standard.string(forKey: KEY_EMAIL)!
+        return UserDefaults.standard.string(forKey: KEY_EMAIL) ?? ""
     }
     
-    func saveAndPutEmail(dni:String) {
-        UserDefaults.standard.set(dni,forKey: KEY_EMAIL)
+    func saveAndPutEmail(email:String) {
+        UserDefaults.standard.set(email,forKey: KEY_EMAIL)
         UserDefaults.standard.synchronize()
     }
         
     func deleteEmail() {
         UserDefaults.standard.removeObject(forKey: KEY_EMAIL)
+        UserDefaults.standard.synchronize()
+    }
+    
+    func getName() -> String {
+        return UserDefaults.standard.string(forKey: KEY_NAME_USER) ?? ""
+    }
+    
+    func saveAndPutName(name:String) {
+        UserDefaults.standard.set(name,forKey: KEY_NAME_USER)
+        UserDefaults.standard.synchronize()
+    }
+        
+    func deleteName() {
+        UserDefaults.standard.removeObject(forKey: KEY_NAME_USER)
+        UserDefaults.standard.synchronize()
+    }
+    
+    func getLastName() -> String {
+        return UserDefaults.standard.string(forKey: KEY_LAST_NAME_USER) ?? ""
+    }
+    
+    func saveAndPutLastName(last:String) {
+        UserDefaults.standard.set(last,forKey: KEY_LAST_NAME_USER)
+        UserDefaults.standard.synchronize()
+    }
+        
+    func deleteLastName() {
+        UserDefaults.standard.removeObject(forKey: KEY_LAST_NAME_USER)
         UserDefaults.standard.synchronize()
     }
     
@@ -86,6 +116,8 @@ class UsersDefaultsCitasMigraciones{
         UserDefaults.standard.removeObject(forKey: KEY_DATE_BIRTHDATE)
         UserDefaults.standard.removeObject(forKey: KEY_ADDRESS)
         UserDefaults.standard.removeObject(forKey: KEY_EMAIL)
+        UserDefaults.standard.removeObject(forKey: KEY_NAME_USER)
+        UserDefaults.standard.removeObject(forKey: KEY_LAST_NAME_USER)
         UserDefaults.standard.synchronize()
     }
     

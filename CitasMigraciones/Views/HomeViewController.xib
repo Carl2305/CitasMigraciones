@@ -24,7 +24,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Rdv-Q1-yJa">
-                    <rect key="frame" x="25" y="95.5" width="325" height="476.5"/>
+                    <rect key="frame" x="25" y="83" width="325" height="501.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenido:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nra-Ap-eSF">
                             <rect key="frame" x="0.0" y="0.0" width="325" height="31.5"/>
@@ -32,18 +32,18 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Carlos Alberto Mogollon Espinoza" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="R20-ys-TVx">
-                            <rect key="frame" x="0.0" y="56.5" width="325" height="95"/>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="R20-ys-TVx">
+                            <rect key="frame" x="0.0" y="56.5" width="325" height="120"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="95" id="vaM-kj-E2a"/>
+                                <constraint firstAttribute="height" constant="120" id="vaM-kj-E2a"/>
                             </constraints>
                             <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="umb-cg-Bm1">
-                            <rect key="frame" x="0.0" y="176.5" width="325" height="40"/>
+                            <rect key="frame" x="0.0" y="201.5" width="325" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="7no-ro-OMF"/>
                             </constraints>
@@ -54,7 +54,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jB9-wr-2Wu">
-                            <rect key="frame" x="0.0" y="241.5" width="325" height="40"/>
+                            <rect key="frame" x="0.0" y="266.5" width="325" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="8YI-Mv-mbj"/>
                             </constraints>
@@ -67,7 +67,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8YV-g8-1Ly">
-                            <rect key="frame" x="0.0" y="306.5" width="325" height="40"/>
+                            <rect key="frame" x="0.0" y="331.5" width="325" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="N0R-Ch-6LL"/>
                             </constraints>
@@ -80,7 +80,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezH-tp-x2K">
-                            <rect key="frame" x="0.0" y="371.5" width="325" height="40"/>
+                            <rect key="frame" x="0.0" y="396.5" width="325" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="Gzp-q0-MDn"/>
                             </constraints>
@@ -93,7 +93,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hN-Xu-UGh">
-                            <rect key="frame" x="0.0" y="436.5" width="325" height="40"/>
+                            <rect key="frame" x="0.0" y="461.5" width="325" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="o2v-Vh-VAw"/>
                             </constraints>

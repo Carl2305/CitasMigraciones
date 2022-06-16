@@ -34,23 +34,26 @@ class SignUpViewController:UIViewController{
         validatorDniButton.borderRound()
         validatorDniButton.borderGreen()
         
-        if(self.isValidDni){
-            validatorDniButton.isEnabled = false
-            signUpButton.isEnabled = true
-        }else{
+        if(!self.isValidDni){
+            dniTextField.text = ""
             validatorDniButton.isEnabled = true
+            dniTextField.isEnabled = true
             signUpButton.isEnabled = false
+            addressTextField.isEnabled = false
+            emailTextField.isEnabled = false
+            passwordTextField.isEnabled = false
+            repeatPasswordTextField.isEnabled = false
+        }else{
+            self.cleanForm()
         }
         
     }
     @IBAction func validatorDniButtonAction(_ sender: Any) {
         let dni=dniTextField.text!
         if(dni != ""){
-            // aqui llama al servicio para validar el DNI
-            self.isValidDni = true
-            signUpButton.isEnabled = true
+            self.validateDNI(dni: dni)
         }else{
-            showAlert(title: "Error", message: "Ingrese un Documento de Identidad")
+            showAlert(title: "Error", message: "Ingrese un Documento de Identidad para Validar")
         }
     }
     
@@ -92,13 +95,46 @@ class SignUpViewController:UIViewController{
                 }
             }else{
                 validatorDniButton.isEnabled = true
+                dniTextField.isEnabled = true
                 signUpButton.isEnabled = false
+                addressTextField.isEnabled = false
+                emailTextField.isEnabled = false
+                passwordTextField.isEnabled = false
+                repeatPasswordTextField.isEnabled = false
                 showAlert(title: "Error", message: "Ingrese un Documento de Identidad")
             }
         }else{
             showAlert(title: "Error", message: "Antes debe validar su Documento de Identidad")
         }
         
+    }
+    
+    func validateDNI(dni:String){
+        let URL_BASE:String = ConstantsCitasMigraciones.self().URL_BASE_API + "auth/validarDNI/\(dni)"
+        Alamofire.request(URL_BASE, method: .get, encoding: JSONEncoding.default).responseJSON{ (response) in
+            switch response.result{
+                
+            case .success(let val):
+                let json=JSON(val)
+                let dataResponse = ApiResponseCreated(mensaje: json["mensaje"].stringValue, status: json["status"].stringValue)
+                if(dataResponse.status=="OK"){
+                    self.showAlertValidateSuccessOrError(message: "¿Son sus datos correctos? Nombres: \(dataResponse.mensaje)")
+                }else{
+                    self.showAlert(title: "Error Validación", message: "No se pudo validar el DNI.")
+                    self.validatorDniButton.isEnabled = true
+                    self.dniTextField.isEnabled = true
+                    self.isValidDni = false
+                    self.signUpButton.isEnabled = false
+                    self.addressTextField.isEnabled = false
+                    self.emailTextField.isEnabled = false
+                    self.passwordTextField.isEnabled = false
+                    self.repeatPasswordTextField.isEnabled = false
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+               self.showAlert(title: "Error", message: "No se pudo validar el DNI, error en el servicio")
+            }
+        }
     }
     
     func signUpUser(dni:String,date:String,address:String,email:String,password:String){
@@ -118,13 +154,11 @@ class SignUpViewController:UIViewController{
                 let json=JSON(val)
                 let dataResponse = ApiResponseCreated(mensaje: json["mensaje"].stringValue, status: json["status"].stringValue)
                 if(dataResponse.status=="OK"){
+                    self.getUserForSetUserDefaults(dni: dni)
                     self.cleanForm()
-                    // redireige la home
-                    self.navigationController?.pushViewController(HomeViewController(), animated: true)
-                    
                 }else{
                     self.cleanForm()
-                    self.showAlert(title: "Error", message: "No se pudo Registrar")
+                    self.showAlert(title: "Error", message: dataResponse.mensaje)
                 }
             case .failure(let error):
                 print(error.localizedDescription)
@@ -132,8 +166,35 @@ class SignUpViewController:UIViewController{
                self.showAlert(title: "Error", message: "No se pudo Registrar, error en el servicio")
             }
         }
-        
     }
+    
+    func getUserForSetUserDefaults(dni:String){
+        let URL_BASE:String = ConstantsCitasMigraciones.self().URL_BASE_API + "auth/listaPorDNI/\(dni)"
+        Alamofire.request(URL_BASE, method: .post, encoding: JSONEncoding.default).responseJSON{ (response) in
+            switch response.result{
+                
+            case .success(let val):
+                let json=JSON(val)
+                if(json["status"].stringValue=="OK"){
+                    UsersDefaultsCitasMigraciones.self().saveIsLogued(signIn: true)
+                    UsersDefaultsCitasMigraciones.self().saveAndPutDni(dni: json["data"]["dni"].stringValue)
+                    UsersDefaultsCitasMigraciones.self().saveAndPutDateBirthDate(date: json["data"]["fechaNac"].stringValue)
+                    UsersDefaultsCitasMigraciones.self().saveAndPutAddress(address: json["data"]["direccion"].stringValue)
+                    UsersDefaultsCitasMigraciones.self().saveAndPutEmail(email: json["data"]["correo"].stringValue)
+                    UsersDefaultsCitasMigraciones.self().saveAndPutName(name: json["data"]["nombre"].stringValue)
+                    UsersDefaultsCitasMigraciones.self().saveAndPutLastName(last: "\(json["data"]["apePaterno"].stringValue) \(json["data"]["apeMaterno"].stringValue)")
+
+                    // redirige al home
+                    self.navigationController?.pushViewController(HomeViewController(), animated: true)
+                }else{
+                    self.navigationController?.popToRootViewController(animated: true)
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
     
     func getDateForm(input:UIDatePicker,format:String)->String{
         let dateFormatter = DateFormatter()
@@ -149,6 +210,33 @@ class SignUpViewController:UIViewController{
         self.present(alertController, animated: true, completion: nil)
     }
     
+    func showAlertValidateSuccessOrError(message:String){
+        let alert=UIAlertController(title: "Validación Exitosa", message: message, preferredStyle: .alert)
+        
+        let okButtonAction=UIAlertAction(title: "Si, es Correcto", style: .default){
+            (action:UIAlertAction) in
+            self.validatorDniButton.isEnabled = false
+            self.dniTextField.isEnabled = false
+            self.isValidDni = true
+            self.signUpButton.isEnabled = true
+            self.addressTextField.isEnabled = true
+            self.emailTextField.isEnabled = true
+            self.passwordTextField.isEnabled = true
+            self.repeatPasswordTextField.isEnabled = true
+        }
+        
+        let cancelButtonAction=UIAlertAction(title: "No", style: .default){
+            (action: UIAlertAction) in
+            self.cleanForm()
+        }
+        
+        alert.addAction(okButtonAction)
+        alert.addAction(cancelButtonAction)
+        
+        present(alert, animated: true, completion: nil)
+        
+    }
+    
     func cleanForm(){
         dniTextField.text=""
         addressTextField.text=""
@@ -157,6 +245,11 @@ class SignUpViewController:UIViewController{
         repeatPasswordTextField.text=""
         self.isValidDni = false
         validatorDniButton.isEnabled = true
+        dniTextField.isEnabled = true
         signUpButton.isEnabled = false
+        addressTextField.isEnabled = false
+        emailTextField.isEnabled = false
+        passwordTextField.isEnabled = false
+        repeatPasswordTextField.isEnabled = false
     }
 }

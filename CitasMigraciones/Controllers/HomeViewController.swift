@@ -43,6 +43,7 @@ class HomeViewController: UIViewController {
         closeSessionButton.borderRound()
         closeSessionButton.borderRed()
         
+        nameUserTextField.text = "\(UsersDefaultsCitasMigraciones.self().getName()) \(UsersDefaultsCitasMigraciones.self().getLastName())"
     }
 
     @IBAction func searchAppointmentButtonAction(_ sender: Any) {

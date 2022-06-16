@@ -30,6 +30,10 @@ class UpdateCredentialsViewController: UIViewController {
         // Do any additional setup after loading the view.
         title="Credenciales"
         changePasswordButton.borderRound()
+        
+        nameLabel.text = UsersDefaultsCitasMigraciones.self().getName()
+        lastNameLabel.text = UsersDefaultsCitasMigraciones.self().getLastName()
+        addressLabel.text = UsersDefaultsCitasMigraciones.self().getAddress()
     }
 
     @IBAction func changePasswordButtonAction(_ sender: Any) {
