@@ -6,4 +6,10 @@
 //  Copyright © 2022 Carlos Alberto Mogollon Espinoza. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class ConstantsCitasMigraciones{
+    let URL_BASE_API:String = "http://citasmigraciones.azurewebsites.net/api/"
+    
+}
+

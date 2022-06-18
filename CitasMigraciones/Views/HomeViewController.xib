@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="CitasMigraciones" customModuleProvider="target">
+            <connections>
+                <outlet property="ChangeCredentialsButton" destination="ezH-tp-x2K" id="t8M-06-n5D"/>
+                <outlet property="closeSessionButton" destination="1hN-Xu-UGh" id="TvZ-b4-pkq"/>
+                <outlet property="listCampusButton" destination="8YV-g8-1Ly" id="LiP-KR-LTr"/>
+                <outlet property="nameUserTextField" destination="R20-ys-TVx" id="qu6-Cd-yNO"/>
+                <outlet property="registerAppointmentButton" destination="jB9-wr-2Wu" id="1J8-ke-LP6"/>
+                <outlet property="searchAppointmentButton" destination="umb-cg-Bm1" id="UTK-bU-NUj"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Rdv-Q1-yJa">
+                    <rect key="frame" x="25" y="83" width="325" height="501.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenido:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nra-Ap-eSF">
+                            <rect key="frame" x="0.0" y="0.0" width="325" height="31.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="R20-ys-TVx">
+                            <rect key="frame" x="0.0" y="56.5" width="325" height="120"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="120" id="vaM-kj-E2a"/>
+                            </constraints>
+                            <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="umb-cg-Bm1">
+                            <rect key="frame" x="0.0" y="201.5" width="325" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="7no-ro-OMF"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="🔍   Consular Cita"/>
+                            <connections>
+                                <action selector="searchAppointmentButtonAction:" destination="-1" eventType="touchUpInside" id="K8T-QL-P9J"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jB9-wr-2Wu">
+                            <rect key="frame" x="0.0" y="266.5" width="325" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="8YI-Mv-mbj"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="📝   Registrar Cita">
+                                <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="registerAppointmentButtonAction:" destination="-1" eventType="touchUpInside" id="Ah1-Og-nB4"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8YV-g8-1Ly">
+                            <rect key="frame" x="0.0" y="331.5" width="325" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="N0R-Ch-6LL"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="🧾   Listado de Sedes">
+                                <color key="titleColor" red="0.96078431369999995" green="0.48627450979999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="listCampusButtonAction:" destination="-1" eventType="touchUpInside" id="VKJ-oV-JEy"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezH-tp-x2K">
+                            <rect key="frame" x="0.0" y="396.5" width="325" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Gzp-q0-MDn"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="🔐   Cambiar Credenciales">
+                                <color key="titleColor" red="0.17254901959999999" green="0.21960784310000001" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="ChangeCredentialsButtonAction:" destination="-1" eventType="touchUpInside" id="1V7-iE-dA0"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hN-Xu-UGh">
+                            <rect key="frame" x="0.0" y="461.5" width="325" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="o2v-Vh-VAw"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="❌   Cerrar Sesión">
+                                <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="closeSessionButtonAction:" destination="-1" eventType="touchUpInside" id="qzl-q5-eDA"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Rdv-Q1-yJa" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="29S-t0-uvk"/>
+                <constraint firstItem="Rdv-Q1-yJa" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="ExJ-j8-r5I"/>
+                <constraint firstItem="Rdv-Q1-yJa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="UGY-0E-dHm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Rdv-Q1-yJa" secondAttribute="trailing" constant="25" id="z8T-wO-Ldq"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="132" y="109"/>
+        </view>
+    </objects>
+</document>
