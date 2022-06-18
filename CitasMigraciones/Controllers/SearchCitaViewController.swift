@@ -51,9 +51,13 @@ class SearchCitaViewController: UIViewController, UITableViewDelegate, UITableVi
         let dni=searchCitaTextField.text!
         
         if (dni != ""){
-            self.citaData = []
-            loadTableCitas(dni: dni)
-            citaTableView.register(UITableViewCell.self, forCellReuseIdentifier: "CELL")
+            if(dni.count == 8){
+                self.citaData = []
+                loadTableCitas(dni: dni)
+                citaTableView.register(UITableViewCell.self, forCellReuseIdentifier: "CELL")
+            }else{
+                showAlert(title: "Error", message: "El Documento de Identidad debe ser de 8 caracteres")
+            }
         }else{
             self.showAlert(title: "Error", message: "Ingrese un Documento de Identidad")
         }

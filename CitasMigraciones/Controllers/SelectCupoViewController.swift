@@ -85,15 +85,6 @@ class SelectCupoViewController: UIViewController, UITableViewDelegate, UITableVi
                             let cup = Cupo(idCupo: cupo["idCupo"].intValue, sede: camp, fechaCupo: cupo["fechaCupo"].stringValue, estado: cupo["estado"].boolValue)
                             self.cupoData.append(cup)
                             
-                            
-                            /*if (!cupo["estado"].boolValue){
-                                let camp = Campus(idSede: cupo["sede"]["idSede"].intValue, nombre: cupo["sede"]["nombre"].stringValue)
-                                let cup = Cupo(idCupo: cupo["idCupo"].intValue, sede: camp, fechaCupo: cupo["fechaCupo"].stringValue, estado: cupo["estado"].boolValue)
-                                self.cupoData.append(cup)
-                            }else{
-                                print("cod cupo -> ",cupo["idCupo"].intValue)
-                                print("estado cupo -> ",cupo["estado"].boolValue)
-                            }*/
                         })
                         self.cupoTableView.reloadData()
                     }else{

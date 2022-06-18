@@ -68,30 +68,34 @@ class SignUpViewController:UIViewController{
         
         if(self.isValidDni){
             if(dni != ""){
-                if(date != ""){
-                    if(address != ""){
-                        if(email != ""){
-                            if(password != ""){
-                                if(repeatPassword != ""){
-                                    if(password == repeatPassword){
-                                        signUpUser(dni: dni, date: date, address: address, email: email, password: password)
+                if(dni.count == 8){
+                    if(date != ""){
+                        if(address != ""){
+                            if(email != ""){
+                                if(password != ""){
+                                    if(repeatPassword != ""){
+                                        if(password == repeatPassword){
+                                            signUpUser(dni: dni, date: date, address: address, email: email, password: password)
+                                        }else{
+                                            showAlert(title: "Error", message: "La Contraseña y su Confirmación no son Identicas.")
+                                        }
                                     }else{
-                                        showAlert(title: "Error", message: "La Contraseña y su Confirmación no son Identicas.")
+                                        showAlert(title: "Error", message: "Ingrese la Contraseña de Confirmación")
                                     }
                                 }else{
-                                    showAlert(title: "Error", message: "Ingrese la Contraseña de Confirmación")
+                                    showAlert(title: "Error", message: "Ingrese una Contraseña")
                                 }
                             }else{
-                                showAlert(title: "Error", message: "Ingrese una Contraseña")
+                                showAlert(title: "Error", message: "Ingrese un Correo Electrónico")
                             }
                         }else{
-                            showAlert(title: "Error", message: "Ingrese un Correo Electrónico")
+                            showAlert(title: "Error", message: "Ingrese una Dirección")
                         }
                     }else{
-                        showAlert(title: "Error", message: "Ingrese una Dirección")
+                        showAlert(title: "Error", message: "Seleccione una Fecha de Nacimiento")
                     }
                 }else{
-                    showAlert(title: "Error", message: "Seleccione una Fecha de Nacimiento")
+                    showAlert(title: "Error", message: "El Documento de Identidad debe ser de 8 caracteres")
                 }
             }else{
                 validatorDniButton.isEnabled = true

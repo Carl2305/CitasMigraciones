@@ -44,18 +44,23 @@ class PayRegisterViewController: UIViewController {
     
     @IBAction func registerCitaButtonAction(_ sender: Any) {
         view.endEditing(true)
-        //let dni = dniTextField.text!
         let numR = numReciboTextField.text!
         let codV = codVerifyTextField.text!
         let dateP = self.getDateForm(input: payDateDatePicker, format: "yyyy-MM-dd")
         
         if(numR != ""){
-            if(codV != ""){
-                
-                self.rgisterRecibo(numR: numR, codV: codV, date: dateP)
-                
+            if(numR.count == 6){
+                if(codV != ""){
+                    if(codV.count == 6){
+                        self.rgisterRecibo(numR: numR, codV: codV, date: dateP)
+                    }else{
+                        showAlert(title: "Error", message: "El código de verificación es de 6 caracteres")
+                    }
+                }else{
+                    showAlert(title: "Error", message: "Ingrese un Código de Verificación")
+                }
             }else{
-                showAlert(title: "Error", message: "Ingrese un Código de Verificación")
+                showAlert(title: "Error", message: "El N° del Recibo es de 6 caracteres")
             }
         }else{
             showAlert(title: "Error", message: "Ingrese un Número de Recibo")

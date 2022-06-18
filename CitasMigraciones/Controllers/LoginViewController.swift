@@ -42,10 +42,14 @@ class LoginViewController: UIViewController {
         let password = passwordTextField.text!
         
         if(dni != ""){
-            if(password != ""){
-                LogInUser(dni: dni, password: password)
+            if(dni.count == 8){
+                if(password != ""){
+                    LogInUser(dni: dni, password: password)
+                }else{
+                    showAlert(title: "Error", message: "Ingrese su Contraseña")
+                }
             }else{
-                showAlert(title: "Error", message: "Ingrese su Contraseña")
+                showAlert(title: "Error", message: "El Documento de Identidad debe ser de 8 caracteres")
             }
         }else{
             showAlert(title: "Error", message: "Ingrese un Documento de Identidad")

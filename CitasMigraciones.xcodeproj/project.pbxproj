@@ -16,7 +16,6 @@
 		E04DF056283AA26000F51664 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E04DF055283AA26000F51664 /* Assets.xcassets */; };
 		E04DF059283AA26000F51664 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E04DF057283AA26000F51664 /* LaunchScreen.storyboard */; };
 		E04DF06A283AA4F000F51664 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04DF069283AA4F000F51664 /* Constants.swift */; };
-		E04DF06C283AA5A300F51664 /* EntityFileTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04DF06B283AA5A300F51664 /* EntityFileTest.swift */; };
 		E082B9FF28540C7E0081D386 /* ApiResponseGeneric.swift in Sources */ = {isa = PBXBuildFile; fileRef = E082B9FE28540C7E0081D386 /* ApiResponseGeneric.swift */; };
 		E0D75ECF284949CA009FE61D /* ExtensionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D75ECE284949CA009FE61D /* ExtensionButton.swift */; };
 		E0D75ED128494CC6009FE61D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D75ED028494CC6009FE61D /* SignUpViewController.swift */; };
@@ -54,7 +53,6 @@
 		E04DF058283AA26000F51664 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E04DF05A283AA26000F51664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E04DF069283AA4F000F51664 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		E04DF06B283AA5A300F51664 /* EntityFileTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityFileTest.swift; sourceTree = "<group>"; };
 		E082B9FE28540C7E0081D386 /* ApiResponseGeneric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponseGeneric.swift; sourceTree = "<group>"; };
 		E0D75ECE284949CA009FE61D /* ExtensionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionButton.swift; sourceTree = "<group>"; };
 		E0D75ED028494CC6009FE61D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -163,7 +161,6 @@
 		E04DF061283AA38500F51664 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E04DF06B283AA5A300F51664 /* EntityFileTest.swift */,
 				E082B9FE28540C7E0081D386 /* ApiResponseGeneric.swift */,
 				E0E7EC182856CF6B00D6D895 /* SedeResponse.swift */,
 				E0E646D22857A51000E88256 /* CitaResponse.swift */,
@@ -322,7 +319,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0E7EC262856E4B800D6D895 /* SearchCitaViewController.swift in Sources */,
-				E04DF06C283AA5A300F51664 /* EntityFileTest.swift in Sources */,
 				E0E646DA285803C700E88256 /* RegisterCitaViewController.swift in Sources */,
 				E04DF06A283AA4F000F51664 /* Constants.swift in Sources */,
 				E0E646E2285839C900E88256 /* PayRegisterViewController.swift in Sources */,
