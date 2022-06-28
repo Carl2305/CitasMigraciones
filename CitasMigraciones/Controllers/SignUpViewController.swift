@@ -189,7 +189,7 @@ class SignUpViewController:UIViewController{
                     UsersDefaultsCitasMigraciones.self().saveAndPutLastName(last: "\(json["data"]["apePaterno"].stringValue) \(json["data"]["apeMaterno"].stringValue)")
 
                     // redirige al home
-                    self.navigationController?.pushViewController(HomeViewController(), animated: true)
+                    self.showAlertRegister()
                 }else{
                     self.navigationController?.popToRootViewController(animated: true)
                 }
@@ -212,6 +212,19 @@ class SignUpViewController:UIViewController{
         let alertController=UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .default))
         self.present(alertController, animated: true, completion: nil)
+    }
+    func showAlertRegister(){
+        let alert=UIAlertController(title: "Registro Exitoso", message: "Se registró el usuario, ahora puede ir al inicio de sesión", preferredStyle: .alert)
+        
+        let okButtonAction=UIAlertAction(title: "OK", style: .default){
+            (action:UIAlertAction) in
+            self.navigationController?.popToRootViewController(animated: true)
+        }
+        
+        alert.addAction(okButtonAction)
+        
+        present(alert, animated: true, completion: nil)
+        
     }
     
     func showAlertValidateSuccessOrError(message:String){

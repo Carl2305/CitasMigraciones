@@ -103,7 +103,6 @@ class PayRegisterViewController: UIViewController {
             case .success(let val):
                 let json=JSON(val)
                 if(json["status"].stringValue == "OK"){
-                    
                     self.registerCita(cup: self.cupo, idRecb: json["data"]["id_recibo"].intValue, dni: UsersDefaultsCitasMigraciones.self().getDni())
                 }
             case .failure(let error):
@@ -134,7 +133,6 @@ class PayRegisterViewController: UIViewController {
                 
             case .success(let val):
                 let json=JSON(val)
-                print("response - > ", json)
                 if(json["status"].stringValue == "OK"){
                     self.updateStatusCupo(cp: cup)
                 }else{
@@ -159,13 +157,11 @@ class PayRegisterViewController: UIViewController {
             "sede":paramSede,
             "fechaCupo":cp.fechaCupo
         ]
-        
         Alamofire.request(URL_BASE, method: .put, parameters: params, encoding: JSONEncoding.default).responseJSON{ (response) in
             switch response.result{
                 
             case .success(let val):
                 let json=JSON(val)
-                print("response - > ", json)
                 if(json["status"].stringValue == "OK"){
                     self.showAlertRedirectHome(message: "La cita se registro exitosamente!")
                 }
